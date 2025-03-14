@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiagarajar Crafts Foundation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            overflow-y: auto; /* Enables vertical scrolling */
+            height: 100vh;
+        }
+
+        /* Background Image with Blur Effect */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('slidefirst.jpg') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(8px); /* Blurs the background */
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        /* Main Image Section */
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeZoomIn 3s ease-in-out forwards;
+        }
+
+        .image-container img {
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes fadeZoomIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Bold Text for Institution Name */
+        .bold-text {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 3s forwards;
+        }
+
+        /* Information Box Styling */
+        .info-box {
+            width: 60%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            border: 2px solid white;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+            font-size: 1.2rem;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        .description-box { animation-delay: 5s; }
+        .target-groups-box { animation-delay: 7s; }
+        .training-box { animation-delay: 9s; }
+
+        /* Related Sections Button */
+        .related-sections {
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 11s forwards;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #ff6600;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #cc5200;
+        }
+
+        /* Animation for Text & Boxes */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Blurred Background -->
+    <div class="background"></div>
+
+    <!-- Content Section -->
+    <div class="content">
+
+        <!-- Top Image -->
+        <div class="image-container">
+            <img src="G:\college\images\tcfound.jpg" alt="Thiagarajar Crafts Foundation">
+        </div>
+
+        <!-- Institution Name -->
+        <div class="bold-text">
+            Thiagarajar Group of Institutions, Madurai, South India
+        </div>
+
+        <!-- Description Box -->
+        <div class="info-box description-box">
+            <strong>Description:</strong><br>
+            The Foundation serves to identify, protect, enhance and popularise the traditional arts and crafts of Tamilnadu. It aims at identifying craftspersons in need of revival, support, promotion, and tapping new talent, especially among women and youth.
+        </div>
+
+        <!-- Target Groups Box -->
+        <div class="info-box target-groups-box">
+            <strong>Target Groups:</strong><br>
+            This sector helps to develop 23 million artisans who are degraded by society because of their poverty and low social status.<br>
+            Unemployed youth, college dropouts, relocated communities, families, and amateur craftspersons.
+        </div>
+
+        <!-- Training Box -->
+        <div class="info-box training-box">
+            <strong>Training:</strong><br>
+            In the first stage, concentration and focus will be on the development of traditional crafts and crafts persons.<br>
+            In the second stage, as a latent function, the foundation intends to give training to aspiring college students who have an interest in crafts work, as this could be a source of supplementary occupation and income.
+        </div>
+
+        <!-- Related Sections Button -->
+        <div class="related-sections">
+            <a href="http://graphicem.com/portfolio-item/thiagarajar-crafts-foundation-2/" class="btn" target="_blank">Related Sections</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

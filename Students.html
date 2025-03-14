@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/slidefirst.jpg') no-repeat center center fixed;
+            background-size: cover;
+            backdrop-filter: blur(10px);
+        }
+        .navbar {
+            background-color: rgba(51, 51, 51, 0.8);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar a {
+            padding: 14px 20px;
+            display: block;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .navbar a:hover, .navbar a.active {
+            background-color: #575757;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="Scholarship.html">Scholarship</a>
+        <a href="Placement_cell.html">Placement Cell</a>
+        <a href="file:///G:/college/clubs.html">Clubs</a>
+        <a href="#" onclick="showTab(event, 'career')">Career Guidance Cell</a>
+        <a href="#" onclick="showTab(event, 'entrepreneurship')">Entrepreneurship Dev. Cell</a>
+        <a href="#" onclick="showTab(event, 'womenscounseling')">Women's Counseling Cell</a>
+        <a href="#" onclick="showTab(event, 'firstaid')">First Aid & Blood Donor Cell</a>
+    </div>
+    
+    <div id="career" class="content">
+        <h2>Career Guidance Cell</h2>
+        <p>Guidance and counseling for career opportunities.</p>
+    </div>
+    <div id="entrepreneurship" class="content">
+        <h2>Entrepreneurship Development Cell</h2>
+        <p>Resources and support for budding entrepreneurs.</p>
+    </div>
+    <div id="womenscounseling" class="content">
+        <h2>Women's Counseling Cell</h2>
+        <p>Support and resources for female students.</p>
+    </div>
+    <div id="firstaid" class="content">
+        <h2>First Aid & Blood Donor Cell</h2>
+        <p>Medical assistance and blood donation information.</p>
+    </div>
+    
+    <script>
+        function showTab(event, tabId) {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            var navbarLinks = document.querySelectorAll('.navbar a');
+            navbarLinks.forEach(link => link.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>

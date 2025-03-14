@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('G:/college/slidefirst.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        .container {
+            display: flex;
+            background: rgba(0, 0, 0, 0.6);
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .sidebar h2 {
+            text-align: center;
+            color: white;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+        }
+        .sidebar a:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .slider {
+            position: relative;
+            max-width: 600px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slides img {
+            width: 100%;
+            display: none;
+        }
+        .slides img.active {
+            display: block;
+        }
+        .department-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .department-buttons button {
+            background: #0073e6;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .department-buttons button:hover {
+            background: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Academics</h2>
+            <a href="#">Academic Departments</a>
+            <a href="#" id="nonAcademicLink">Non-Academic Departments</a>
+            <a href="#" id="syllabusLink">Curriculum and Syllabus</a>
+            <a href="#" id="calendarLink">Academic Calendar</a>
+            <a href="#" id="ignouLink">IGNOU Centre</a>
+            <a href="#" id="managementProgrammeLink">Management Programme</a>
+            <a href="#" id="craftsFoundationLink">Thiagarajar Crafts Foundation</a>
+        </div>
+        <div class="main-content">
+            <h1>Academic Departments</h1>
+            <div class="slider">
+                <div class="slides">
+                    <img src="G:/college/images/img1.jpg" class="active" alt="Slide 1">
+                    <img src="G:/college/images/img2.jpg" alt="Slide 2">
+                    <img src="G:/college/images/img3.png" alt="Slide 3">
+                    <img src="G:/college/images/placement.png" alt="Slide 4">
+                    <img src="G:/college/images/img2.jpg" alt="Slide 5">
+                </div>
+            </div>
+            <div class="department-buttons">
+                <button onclick="navigate(1)">Tamil</button>
+                <button onclick="navigate(2)">English</button>
+                <button onclick="navigate(3)">Economics</button>
+                <button onclick="navigate(4)">Business Administration</button>
+                <button onclick="navigate(5)">Commerce</button>
+                <button onclick="navigate(6)">Mathematics</button>
+                <button onclick="navigate(7)">Physics</button>
+                <button onclick="navigate(8)">Chemistry</button>
+                <button onclick="navigate(9)">Botany</button>
+                <button onclick="navigate(10)">Zoology</button>
+                <button onclick="navigate(11)">Computer Science</button>
+                <button onclick="navigate(15)">M.Sc Biotech</button>
+                <button onclick="navigate(16)">CA & IT</button>
+                <button onclick="navigate(14)">Psychology</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let index = 0;
+        function changeSlide() {
+            let slides = document.querySelectorAll(".slides img");
+            slides[index].classList.remove("active");
+            index = (index + 1) % slides.length;
+            slides[index].classList.add("active");
+        }
+        setInterval(changeSlide, 3000);
+
+        // Redirect "Non-Academic Departments" to local file
+        document.getElementById("nonAcademicLink").addEventListener("click", function() {
+            window.location.href = "file:///G:/college/non-Academics.html";
+        });
+
+        // Redirect "Curriculum and Syllabus" to syllabus page
+        document.getElementById("syllabusLink").addEventListener("click", function() {
+            window.location.href = "https://www.tcarts.in/academics/syllabus.php";
+        });
+
+        // Redirect "Academic Calendar" to local file
+        document.getElementById("calendarLink").addEventListener("click", function() {
+            window.location.href = "file:///G:/college/Academic_calender.html";
+        });
+
+        // Redirect "IGNOU Centre" to local file
+        document.getElementById("ignouLink").addEventListener("click", function() {
+            window.location.href = "file:///G:/college/IGNOU.html";
+        });
+
+        // Redirect "Management Programme" to local file
+        document.getElementById("managementProgrammeLink").addEventListener("click", function() {
+            window.location.href = "file:///G:/college/Management_programme.html";
+        });
+
+        // Redirect "Thiagarajar Crafts Foundation" to local file
+        document.getElementById("craftsFoundationLink").addEventListener("click", function() {
+            window.location.href = "file:///G:/college/Thiagarajar_crafts_foundation.html";
+        });
+
+        // Function to navigate to department pages
+        function navigate(id) {
+            window.location.href = `https://tcarts.in/dept/department.php?id=${id}`;
+        }
+    </script>
+</body>
+</html>

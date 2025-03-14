@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Webpage</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: url('G:/college/slidefirst.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            text-align: center;
+            position: relative;
+            overflow-y: auto;
+            height: auto;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 2s ease-in-out, transform 1.5s ease-in-out;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .show {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .founder {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: 900;
+            color: #fff;
+            font-family: 'Arial Black', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .info-box, .history-container {
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(255, 102, 0, 0.8);
+            color: white;
+            border-radius: 15px;
+            width: 70%;
+            max-width: 800px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+        .history-container {
+            background: rgba(0, 0, 102, 0.8);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+        }
+        .history-container.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .history-content {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            line-height: 1.6;
+        }
+        .video-container {
+            margin-top: 30px;
+            width: 70%;
+            max-width: 800px;
+            display: flex;
+            justify-content: center;
+        }
+        iframe {
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <img id="historyImage" src="G:/college/images/thiagarajar.png" alt="Historical Figure">
+    <div class="founder">FOUNDER<br>Kalaithanthai Karumuttu Thiagarajan Chettiar</div>
+    <div class="info-box">
+        <h2>VISION</h2>
+        <p>To serve the society by providing affordable quality higher education to all at all times.</p>
+        <h2>MISSION</h2>
+        <p>To provide a gender-friendly academic ambience that ensures knowledge acquisition through student-teacher synergy resulting in character development and career readiness.</p>
+    </div>
+    <div class="history-container" id="historyContainer">
+        <h2>College since its inception</h2>
+        <div class="history-content">
+            <p>Thiagarajar College founded on 7th July 1949, was formally inaugurated on 12th October 1949.</p>
+            <p>The college offers 28 UG, 12 PG, 11 M.Phil, and 10 Ph.D. programs, along with diploma and certificate courses.</p>
+            <p>It is a private, aided co-educational institution affiliated with Madurai Kamaraj University.</p>
+            <p>Accredited with ‘A’ Grade by NAAC multiple times, the college focuses on employability, research, and student development.</p>
+            <p>The Alumni Charitable Trust plays a crucial role in the college’s development.</p>
+        </div>
+    </div>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MrZL1bnk8tM?si=pOLIcy-n5qEb3oox" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <script>
+        window.onload = function() {
+            document.getElementById("historyImage").classList.add("show");
+            setTimeout(function() {
+                document.getElementById("historyContainer").classList.add("show");
+            }, 2000);
+        };
+    </script>
+</body>
+</html>
