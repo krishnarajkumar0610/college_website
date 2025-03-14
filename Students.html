@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('file:///G:/college/images/sb.jpg') no-repeat center center fixed;
+            background-size: cover;
+            backdrop-filter: blur(10px);
+        }
+        .navbar {
+            background-color: rgba(51, 51, 51, 0.8);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .navbar a {
+            padding: 14px 20px;
+            display: block;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            text-transform: capitalize;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="Scholarship.html">Scholarship</a>
+        <a href="Placement_cell.html">Placement Cell</a>
+        <a href="clubs.html">Clubs</a>
+        <a href="Career_Guidance_Cell.html">Career Guidance Cell</a>
+        <a href="Entrepreneurship_Development_Cell.html">Entrepreneurship Development Cell</a>
+        <a href="#" onclick="openWomensCounseling()">Women's Counseling Cell</a>
+        <a href="#" onclick="openFirstAid()">First Aid & Blood Donor Cell</a>
+    </div>
+
+    <script>
+        function openWomensCounseling() {
+            // Open Women's Counseling Cell page using local file path
+            window.location.href = "file:///G:/college/women's_councelling.html";
+        }
+
+        function openFirstAid() {
+            // Open First Aid & Blood Donor Cell page using local file path
+            window.location.href = "file:///G:/college/First%20aid.html";
+        }
+    </script>
+</body>
+</html>
