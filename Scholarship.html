@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('G:/college/slidefirst.jpg') no-repeat center center fixed;
+            background-size: cover;
+            backdrop-filter: blur(10px);
+        }
+        .container {
+            text-align: center;
+            padding: 50px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            font-size: 42px;
+            font-weight: bold;
+            color: #ffffff;
+            background: linear-gradient(45deg, #ff6600, #ffcc00);
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 10px;
+            animation: slideIn 1.5s ease-in-out;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+        }
+        .scholarship-list {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        ul {
+            text-align: left;
+            padding: 0;
+            list-style: none;
+        }
+        ul li {
+            font-size: 18px;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            transition: background 0.3s, transform 0.3s;
+        }
+        ul li:hover {
+            background: rgba(0, 0, 0, 0.1);
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Scholarship Opportunities</h1>
+        <div class="scholarship-list">
+            <ul>
+                <li>National Scholarships Scheme</li>
+                <li>State Government Merit Scholarship Scheme</li>
+                <li>Tamil Nadu Government Scholarships for Outstanding NCC Cadets</li>
+                <li>Kalaithanthai Karumuttu Thiagarajan Chettiar Memorial Charitable Trust</li>
+                <li>Dr. Radha Thiagarajan Educational Foundation</li>
+                <li>Adi Dravidar and Tribal Welfare Scholarship</li>
+                <li>Adi Dravidar and Tribal Welfare Scholarship (for Hostel Students - Higher Education)</li>
+                <li>Adi Dravidar and Tribal Welfare Scholarship (for Hostel Students)</li>
+                <li>Adi Dravidar and Tribal Welfare Scheme Prize Money Award</li>
+                <li>Tamil Medium Stipend (for B.A. Economics)</li>
+                <li>Backward Classes Welfare Scholarship (for Hostel Students)</li>
+                <li>Backward Classes Welfare Scholarship</li>
+                <li>Tamil Nadu Government Education Trust</li>
+                <li>Sita Ram Jindal Foundation, Jindal Nagar, Bangalore (Educational Scholarship)</li>
+                <li>Tamil Nadu State Government Stipend for Pursuing Ph.D.</li>
+                <li>Indira Gandhi P.G. Scholarship for Single Girl Child</li>
+                <li>Central Government Educational Scholarship</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

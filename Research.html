@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Departments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            height: 100vh;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px;
+            border-bottom: 1px solid #34495e;
+            cursor: pointer;
+        }
+        .sidebar ul li:hover {
+            background: #1abc9c;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            background: #3498db;
+            color: white;
+            padding: 10px;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .section ul li {
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+    <script>
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Research Tabs</h2>
+        <ul>
+            <li onclick="navigateTo('https://tcarts.in/research/research/phd.php')">Research Scholars</li>
+            <li onclick="navigateTo('https://tcarts.in/research/research/viva_online.php')">Ph.D. Viva</li>
+            <li onclick="navigateTo('https://tcarts.in/research/research/projects.php')">Projects</li>
+            <li onclick="navigateTo('https://tcarts.in/research/research/UGC%20Report.php')">UGC MRP Report</li>
+            <li onclick="navigateTo('https://tcarts.in/research/research/consultancy.php')">Consultancy</li>
+            <li onclick="navigateTo('https://tcarts.in/research/research/pdf/Research_Policy.pdf')">Research Policy</li>
+            <li onclick="navigateTo('https://tcarts.in/research/research/pdf/Consultancy_Policy.pdf')">Consultancy Policy</li>
+            <li onclick="navigateTo('https://tcarts.in/research/research/books.php')">Books Published</li>
+            <li onclick="navigateTo('https://tcarts.in/research/research/pdf/IPR.pdf')">IPR Cell</li>
+            <li onclick="navigateTo('https://scholar.google.com/citations?hl=en&user=f66fPdkAAAAJ')">Research Published</li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Research Departments</h1>
+        <div class="section">
+            <h2>Department</h2>
+            <ul>
+                <li>Tamil</li>
+                <li>English</li>
+                <li>Economics</li>
+                <li>Commerce</li>
+                <li>Mathematics</li>
+                <li>Physics</li>
+                <li>Chemistry</li>
+                <li>Botany</li>
+                <li>Zoology</li>
+                <li>MHRD (NCoE)</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Research Centre</h2>
+            <ul>
+                <li>PG and Research Department of Tamil</li>
+                <li>PG and Research Department of English</li>
+                <li>PG and Research Department of Economics</li>
+                <li>PG and Research Department of Commerce</li>
+                <li>PG and Research Department of Mathematics</li>
+                <li>PG and Research Department of Physics</li>
+                <li>PG and Research Department of Chemistry</li>
+                <li>PG and Research Department of Botany</li>
+                <li>PG and Research Department of Zoology</li>
+                <li>National Centre of Excellence in Statistical and Mathematical Modelling on Bio-Research Management</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Recognizing Body</h2>
+            <ul>
+                <li>Madurai Kamaraj University</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
