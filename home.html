@@ -13,7 +13,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('file:///G:/college/slidefirst.jpg') no-repeat center center fixed;
+            background: url('images/slidefirst.jpg') no-repeat center center fixed;
             background-size: cover;
             filter: blur(8px);
             z-index: -1;
@@ -160,8 +160,10 @@
             padding: 15px;
             width: 100%;
             font-size: 14px;
-            position: relative;
-            bottom: 0;
+            position: fixed;
+            bottom: -120px; /* Initially hidden */
+            left: 0;
+            transition: bottom 0.3s;
         }
 
         footer a {
@@ -179,46 +181,18 @@
                 window.location.href = page;
             }
 
-            document.getElementById("historyLink").addEventListener("click", function(event) {
+            document.getElementById("greenCampusLink").addEventListener("click", function(event) {
                 event.preventDefault();
-                navigateTo('history.html');
+                navigateTo('Green_Campus.html');  // Use relative path
             });
 
-            document.getElementById("academicsLink").addEventListener("click", function(event) {
-                event.preventDefault();
-                navigateTo('academics.html');
-            });
-
-            document.getElementById("studentsLink").addEventListener("click", function(event) {
-                event.preventDefault();
-                navigateTo('file:///G:/college/Students.html');
-            });
-
-            document.getElementById("researchLink").addEventListener("click", function(event) {
-                event.preventDefault();
-                navigateTo('file:///G:/college/Research.html');
-            });
-
-            document.getElementById("facilitiesLink").addEventListener("click", function(event) {
-                event.preventDefault();
-                navigateTo('file:///G:/college/Facilities.html');
-            });
-
-            document.getElementById("nirfLink").addEventListener("click", function(event) {
-                event.preventDefault();
-                navigateTo('https://tcarts.in/nirf/nirf.php');
-            });
-
-            // Add the navigation for the IQAC link
-            document.getElementById("iqacLink").addEventListener("click", function(event) {
-                event.preventDefault();
-                navigateTo('file:///G:/college/IQAC.html');  // Navigate to the IQAC page on your local machine
-            });
-
-            // Add the navigation for the Feedback link
-            document.getElementById("feedbackLink").addEventListener("click", function(event) {
-                event.preventDefault();
-                navigateTo('https://tcarts.in/feedback/feedback.php');  // Navigate to the Feedback page
+            window.addEventListener("scroll", function() {
+                let footer = document.querySelector("footer");
+                if (window.scrollY > 100) {
+                    footer.style.bottom = "0";  // Show footer after scrolling
+                } else {
+                    footer.style.bottom = "-120px";  // Hide footer when at the top
+                }
             });
         });
     </script>
@@ -236,17 +210,18 @@
 
     <div class="sidebar">
         <div class="logo-container">
-            <img src="G:\college\images\logo.png" alt="College Logo">
+            <img src="images/logo.png" alt="College Logo">
         </div>
-        <a href="#home"><i class="fas fa-home"></i> Home</a>
-        <a href="#" id="historyLink"><i class="fas fa-book"></i> History</a>
-        <a href="#" id="academicsLink"><i class="fas fa-graduation-cap"></i> Academics</a>
-        <a href="#" id="studentsLink"><i class="fas fa-user-graduate"></i> Students</a>
-        <a href="#" id="researchLink"><i class="fas fa-flask"></i> Research</a>
-        <a href="#" id="facilitiesLink"><i class="fas fa-building"></i> Facilities</a>
-        <a href="#" id="nirfLink"><i class="fas fa-chart-line"></i> NIRF</a>
-        <a href="#" id="iqacLink"><i class="fas fa-certificate"></i> IQAC</a>
-        <a href="#" id="feedbackLink"><i class="fas fa-comment"></i> Feedback</a> <!-- Updated Feedback link -->
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="history.html"><i class="fas fa-book"></i> History</a>
+        <a href="academics.html"><i class="fas fa-graduation-cap"></i> Academics</a>
+        <a href="students.html"><i class="fas fa-user-graduate"></i> Students</a>
+        <a href="research.html"><i class="fas fa-flask"></i> Research</a>
+        <a href="facilities.html"><i class="fas fa-building"></i> Facilities</a>
+        <a href="https://tcarts.in/nirf/nirf.php"><i class="fas fa-chart-line"></i> NIRF</a>
+        <a href="iqac.html"><i class="fas fa-certificate"></i> IQAC</a>
+        <a href="https://tcarts.in/feedback/feedback.php"><i class="fas fa-comment"></i> Feedback</a>
+        <a href="#" id="greenCampusLink"><i class="fas fa-leaf"></i> Green Campus</a>
     </div>
 
     <div class="main-content">
@@ -254,12 +229,14 @@
             <h2>News & Events</h2>
             <p>Admission purely on merit. NO capitation fees. For any clarification, contact admission@tcarts.in.</p>
             <p><a href="https://tcarts.in/cdata/asp12f.pdf" target="_blank">Click here to view the latest circular</a></p>
-            <img src="G:\college\images\event.jpeg" alt="Event Image">
+            <img src="images/event.jpeg" alt="Event Image">
         </div>
     </div>
 
     <footer>
         <p>Thiagarajar College, Madurai</p>
+        <p>#139-140, Kamarajar Salai, Madurai - 625009, India</p>
+        <p>Email: <a href="mailto:principaltcarts@gmail.com">principaltcarts@gmail.com</a></p>
     </footer>
 </body>
 </html>
